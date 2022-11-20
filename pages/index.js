@@ -3,7 +3,7 @@ import { Footer, FooterBanner, HeroBanner } from '../components';
 
 const Home = () => {
   return (
-    <>
+    <div>
       <HeroBanner />
       <div className='products-heading'>
         <h2>Best Selling Products</h2>
@@ -13,7 +13,7 @@ const Home = () => {
         { ['Product 1', 'Product 2'].map((product) => product) }
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
