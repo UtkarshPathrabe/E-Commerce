@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
@@ -9,8 +9,20 @@ import { urlFor } from '../lib/client';
 import getStripe from '../lib/getStripe';
 
 const Cart = () => {
-  const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
+
+  const handleClickOutside = (event) => {
+    if (event.target.className === 'cart-wrapper') {
+      setShowCart(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -32,7 +44,7 @@ const Cart = () => {
   };
 
   return (
-    <div className='cart-wrapper' ref={ cartRef }>
+    <div className='cart-wrapper'>
       <div className='cart-container'>
         <button type='button' className='cart-heading' onClick={() => setShowCart(false)}>
           <AiOutlineLeft />
@@ -69,9 +81,9 @@ const Cart = () => {
                         <span className='plus' onClick={() => { toggleCartItemQuantity(item, 'inc') }}><AiOutlinePlus /></span>
                       </p>
                     </div>
-                    <dutton type='button' className='remove-item' onClick={() => { onRemove(item) }}>
+                    <button type='button' className='remove-item' onClick={() => { onRemove(item) }}>
                       <TiDeleteOutline />
-                    </dutton>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -86,6 +98,9 @@ const Cart = () => {
               <button type='button' onClick={handleCheckout} className='btn'>
                 Pay with Stripe
               </button>
+            </div>
+            <div style={ { display: 'flex', alignItems: 'center', justifyContent: 'center' } }>
+              <span>This is a test site. Please do not use real card info for payment.</span>
             </div>
           </div>
           </>
