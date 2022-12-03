@@ -1835,7 +1835,7 @@
 "@sanity/transaction-collator@2.33.2":
   version "2.33.2"
   resolved "https://registry.npmjs.org/@sanity/transaction-collator/-/transaction-collator-2.33.2.tgz#9661423b5286329dc57faec633acca033e2f627b"
-  integrity sha512-uph48uX0vVVeC4EYzrPhSPsW8iiLcsVw2UgNyez47nZlvn2aFX0sHQD6Xtq0WgA87XbiNrA9Lw4MiPq6viOPJg==
+  integrity sha512-uph48uX0vVVeC4EYzrPhSPsW8iiLcsVw2UgNyez47nZlvn2aFX0sHQD6Xtq0WgA87Xb&#8377;A9Lw4MiPq6viOPJg==
   dependencies:
     "@types/lodash" "^4.14.149"
     lodash "^4.17.15"
@@ -5515,7 +5515,7 @@ hex-color-regex@^1.1.0:
 hey-listen@^1.0.8:
   version "1.0.8"
   resolved "https://registry.npmjs.org/hey-listen/-/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
-  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
+  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdull&#8377;dhwU8Q==
 
 history@^4.6.3:
   version "4.10.1"
