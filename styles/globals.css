@@ -67,12 +67,12 @@ span.text-red {
 }
 
 .logo{
-  color: gray;
-  font-size: 18px;
+  color: rgb(58, 58, 58);
+  font-size: 20px;
 }
 .cart-icon{
   font-size: 25px;
-  color: gray;
+  color: rgb(58, 58, 58);
   cursor: pointer;
   position: relative;
   transition: transform .4s ease;
@@ -657,7 +657,7 @@ span.text-red {
   .hero-banner-container h1{
     font-size: 50px;
   }
- .hero-banner-container h3{
+  .hero-banner-container h3{
     font-size: 40px;
   }
   .hero-banner-container button{
