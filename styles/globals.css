@@ -97,7 +97,7 @@ span.text-red {
 .products-container{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 15px;
   margin-top: 20px;
   width: 100%;
@@ -161,7 +161,7 @@ span.text-red {
 .hero-banner-container h1{
   color: white;
   font-size: 10em;
-  margin-left: -20px;
+  margin-left: 0px;
   text-transform: uppercase;
 }
 .hero-banner-image{
@@ -381,7 +381,7 @@ span.text-red {
   bottom: 0px;
   right: 0px;
   width: 100%;
-  padding: 30px 60px;
+  padding: 16px 60px;
   background-color: #fff;
 }
 
@@ -607,8 +607,12 @@ span.text-red {
 }
 
 @media screen and (max-width:800px) {
+  .products-container{
+    justify-content: center;
+  }
   .hero-banner-container{
     height: 560px;
+    padding: 100px 20px;
   }
   .hero-banner-image{
     width: 77%;
@@ -715,7 +719,7 @@ span.text-red {
     color: black;
   }
   .cart-bottom{
-    padding: 30px;
+    padding: 16px;
   }
 
   .total h3{
