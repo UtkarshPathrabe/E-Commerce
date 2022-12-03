@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { toast } from 'react-hot-toast';
 
 import { client } from '../lib/client';
 import { FooterBanner, HeroBanner, Product } from '../components';
 
 const Home = ({ products, bannerData }) => {
+  const router = useRouter();
+  const { cancelled } = router.query;
+
+  useEffect(() => {
+    if (cancelled) {
+      toast.error('Transaction cancelled!');
+    }
+  }, []);
+
   return (
     <div>
       <HeroBanner heroBanner={ bannerData.length && bannerData[0] } />
