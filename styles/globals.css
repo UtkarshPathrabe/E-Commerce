@@ -378,10 +378,11 @@ span.text-red {
 }
 .cart-bottom{
   position: absolute;
-  bottom: 12px;
-  right: 5px;
+  bottom: 0px;
+  right: 0px;
   width: 100%;
-  padding: 30px 65px;
+  padding: 30px 60px;
+  background-color: #fff;
 }
 
 .btn-container{
